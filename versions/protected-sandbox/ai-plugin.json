@@ -1,0 +1,17 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Sandbox",
+    "name_for_model": "sandbox_code_execution",
+    "description_for_human": "Allow ChatGPT to run Python code on your computer (PROTECTED_SANDBOX version)",
+    "description_for_model": "execute Python code on the users computer. this is the PROTECTED_SANDBOX version. maximum security is enforced.  ",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:8080/openapi.yaml"
+    },
+    "logo_url": "http://localhost:8080/logo.png",
+    "contact_email": "someemailhereidk@wowyourereadingthishowsyoursday.com",
+    "legal_info_url": "http://www.websitehereidklegalinfo.com/legalstuffhereidontreallyknow"
+}

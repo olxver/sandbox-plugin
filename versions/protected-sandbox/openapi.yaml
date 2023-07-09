@@ -1,0 +1,90 @@
+openapi: 3.0.1
+info:
+  title: Sandbox Code Execution Plugin
+  description: A plugin that allows the user to execute Python code and install packages using ChatGPT.
+  version: 'v1'
+servers:
+  - url: http://localhost:8080
+paths:
+  /protected_sandbox_sandbox_security_measures.txt:
+    get:
+      summary: "Returns a text file explaining the security measures of the protected-sandbox version of Sandbox."
+      operationId: "getSecurityMeasures"
+      responses:
+        '200':
+          description: "The text file."
+          content:
+            text/plain:
+              schema:
+                type: string
+  /close:
+    post:
+      summary: Stops the Docker container.
+      operationId: closeContainer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - docker_id
+              properties:
+                docker_id:
+                  type: string
+                  description: The ID of the Docker container to stop.
+      responses:
+        '200':
+          description: The container was successfully stopped.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '400':
+          description: The request was invalid.
+
+  /start:
+    post:
+      summary: Start a new Docker container
+      operationId: startContainer
+      responses:
+        '200':
+          description: A successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  container_id:
+                    type: string
+                    description: The ID of the Docker container that was started
+  /execute:
+    post:
+      summary: Execute Python code in a Docker container
+      operationId: executeCode
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                docker_id:
+                  type: string
+                  description: The ID of the Docker container to execute the code in
+                code:
+                  type: string
+                  description: The Python code to execute
+      responses:
+        '200':
+          description: A successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  output:
+                    type: string
+                    description: The output of the Python code

@@ -1,0 +1,65 @@
+openapi: 3.0.1
+info:
+  title: Sandbox Code Execution Plugin
+  description: A plugin that allows the user to execute Python code and install packages using ChatGPT.
+  version: 'v1'
+servers:
+  - url: http://localhost:8080
+paths:
+  /execute:
+    post:
+      operationId: executeCode
+      summary: Execute Python code
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                code:
+                  type: string
+                  description: The Python code to execute.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: string
+                    description: The output of the executed code.
+                  error:
+                    type: string
+                    description: Any error message from the code execution.
+  /install:
+    post:
+      operationId: installPackage
+      summary: Install a Python package using pip
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                package:
+                  type: string
+                  description: The name of the Python package to install.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  stdout:
+                    type: string
+                    description: The standard output of the pip install command.
+                  stderr:
+                    type: string
+                    description: The standard error of the pip install command.
+

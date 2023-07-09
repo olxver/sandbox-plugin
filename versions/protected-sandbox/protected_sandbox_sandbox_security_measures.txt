@@ -1,0 +1,21 @@
+"""
+# protected-sandbox Security Measures
+
+The protected-sandbox version of the Sandbox plugin implements additional security measures to protect against potentially malicious code.
+
+Here are the key security features:
+
+1. **Containerization**: All code is executed inside a Docker container, which isolates the execution environment from the host system.
+
+2. **Network Isolation**: The Docker container is run with network isolation, preventing network access from within the container.
+
+3. **Code Sanitization**: Before executing, the code is checked for potentially unsafe Python functions and modules (example, 'os'). Any attempt to use these will raise an error and the code will not be executed.
+
+4. **File Cleanup**: After code execution, any files created during the process are deleted from the host system to prevent storage misuse.
+
+5. **Automatic Shutdown**: After a certain amount of time, the Docker container will automatically shutdown to avoid CPU/RAM hogging of the host machine.
+
+
+Please note that while these measures significantly improve the security of the Sandbox environment, they cannot guarantee absolute security. Always be careful when running code from untrusted sources.
+These measures may change over time. Please make sure your version is up-to-date with the GitHub.
+"""
