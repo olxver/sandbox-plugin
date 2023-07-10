@@ -11,4 +11,4 @@ The Sandbox plugin was designed with customization in mind. This allows you to c
 3. Source
   - The least secure. If you're a daredevil, and want to run Python code straight on your own machine, now you can.
 
-**WARNING: I AM NOT RESPONSIBLE FOR ANY DAMAGE CAUSED TO YOUR MACHINE IF YOU CHOOSE SOURCE OR STANDARD.**  
+**WARNING: I AM NOT RESPONSIBLE FOR ANY DAMAGE CAUSED TO YOUR MACHINE IF YOU CHOOSE TO RUN DANGEROUS OR MALICIOUS CODE.**
