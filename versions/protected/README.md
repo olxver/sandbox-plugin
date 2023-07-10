@@ -11,7 +11,7 @@ This version of the Sandbox plugin adds extra security measures on top of the st
 
 1. Clone this repository
 2. Navigate to the `versions/protected/` directory
-3. Install Docker on your system
+3. Install [Docker on your system](https://docs.docker.com/engine/install/)
 4. Build the Docker image using the provided Dockerfile: `docker build -t sandbox-img-v1 .`
 5. Install Python dependencies: `pip install -r requirements.txt`
 6. Run the server: `python server.py`
