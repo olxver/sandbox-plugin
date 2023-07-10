@@ -17,7 +17,7 @@ This version of the Sandbox plugin is designed not to have any security. Run at 
 1. Head over to [ChatGPT](https://chat.openai.com)
 2. Press GPT-4 > Plugins, then scroll down to the Plugin Store
 3. At the bottom right should be a 'Develop your own plugin' option. Press it.
-4. Enter into the prompt 'localhost:8080'
+4. Enter into the prompt 'localhost:3030'
 5. Install it
 
 **Test it by saying something like 'run a hello world program' for example.**
