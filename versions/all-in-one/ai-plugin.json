@@ -1,0 +1,17 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Sandbox",
+    "name_for_model": "sandbox_code_execution_aio",
+    "description_for_human": "Allow ChatGPT to run Python code on your computer (AIO version)",
+    "description_for_model": "execute Python code on the users computer. this is the AIO version, meaning the user will tell you to either run it on a 'secure environment' or to just run it straight on their machine. make sure to double check with them though.  ",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:4221/openapi.yaml"
+    },
+    "logo_url": "http://localhost:4221/logo.png",
+    "contact_email": "someemailhereidk@wowyourereadingthishowsyoursday.com",
+    "legal_info_url": "http://www.websitehereidklegalinfo.com/legalstuffhereidontreallyknow"
+}

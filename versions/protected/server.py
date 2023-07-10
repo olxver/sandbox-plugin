@@ -10,7 +10,7 @@ from quart import request
 import ast
 
 def sanitize_code(code):
-    unsafe_attributes = ['os', 'subprocess', 'open', 'exec', 'eval', 'input', 'raw_input']
+    unsafe_attributes = ['os', 'subprocess', 'open', 'exec', 'eval', 'input', 'raw_input', 'cryptography']
     tree = ast.parse(code)
     for node in ast.walk(tree):
         if isinstance(node, ast.Attribute):
@@ -29,7 +29,7 @@ container_id = None
 async def start():
     global container_id
     client = docker.from_env()
-    container = client.containers.run('sandbox-img-v1', detach=True, network_disabled=False)
+    container = client.containers.run('sandbox-img-v1', detach=True, network_disabled=True)
     container_id = container.id
     return quart.jsonify({'container_id': container_id})
 

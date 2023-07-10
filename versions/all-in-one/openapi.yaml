@@ -4,7 +4,7 @@ info:
   description: A plugin that allows the user to execute Python code and install packages using ChatGPT.
   version: 'v1'
 servers:
-  - url: http://localhost:3030
+  - url: http://localhost:4221
 paths:
   /execute:
     post:
@@ -20,6 +20,9 @@ paths:
                 code:
                   type: string
                   description: The Python code to execute.
+                protected/source:
+                  type: string
+                  description: Whether to run the code in a secure environment (inside a Docker container) or not. If "source", the code will be run directly on the user's machine. If anything else, the code will be run inside a Docker container.
       responses:
         "200":
           description: OK
@@ -37,7 +40,7 @@ paths:
   /install:
     post:
       operationId: installPackage
-      summary: Install a Python package using pip
+      summary: Install a Python package using pip using "source" version
       requestBody:
         required: true
         content:
@@ -62,4 +65,3 @@ paths:
                   stderr:
                     type: string
                     description: The standard error of the pip install command.
-

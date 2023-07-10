@@ -1,17 +1,17 @@
 {
     "schema_version": "v1",
     "name_for_human": "Sandbox",
-    "name_for_model": "sandbox_code_execution",
+    "name_for_model": "sandbox_code_execution_source",
     "description_for_human": "Allow ChatGPT to run Python code on your computer (WARNING: SOURCE VERSION. RUN AT YOUR OWN RISK.)",
-    "description_for_model": "execute Python code on the users computer. this is the SOURCE version. no security implementations. ",
+    "description_for_model": "execute Python code on the users computer. this is the SOURCE version. no security implementations. this is not a 'source' version meaning that its open source, well it is but it means that the python code runs directly on the users pc. ",
     "auth": {
         "type": "none"
     },
     "api": {
         "type": "openapi",
-        "url": "http://localhost:8080/openapi.yaml"
+        "url": "http://localhost:3030/openapi.yaml"
     },
-    "logo_url": "http://localhost:8080/logo.png",
+    "logo_url": "http://localhost:3030/logo.png",
     "contact_email": "someemailhereidk@wowyourereadingthishowsyoursday.com",
     "legal_info_url": "http://www.websitehereidklegalinfo.com/legalstuffhereidontreallyknow"
 }

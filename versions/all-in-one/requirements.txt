@@ -1,0 +1,7 @@
+quart
+quart-cors
+numpy
+matplotlib
+pandas
+scikit-learn
+requests
