@@ -6,7 +6,7 @@ info:
 servers:
   - url: http://localhost:8080
 paths:
-  /protected_sandbox_sandbox_security_measures.txt:
+  /protected-sandbox_security_measures.txt:
     get:
       summary: "Returns a text file explaining the security measures of the protected-sandbox version of Sandbox."
       operationId: "getSecurityMeasures"
