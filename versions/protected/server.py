@@ -70,9 +70,9 @@ async def close():
     container.stop()
     return quart.jsonify({'message': f'Container {container_id} stopped.'})
 
-@app.get("/protected_sandbox_sandbox_security_measures.txt")
+@app.get("/protected-sandbox_security_measures.txt")
 async def security_measures():
-    filename = "protected_sandbox_sandbox_security_measures.txt"
+    filename = "protected-sandbox_security_measures.txt"
     return await quart.send_file(filename, mimetype='text/plain')
 
 
