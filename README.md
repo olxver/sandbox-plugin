@@ -17,3 +17,7 @@ Sandbox comes in three versions, each designed to meet different user needs and 
 ## Contributions
 
 - Contributions are welcome. Please submit an issue or pull request.
+
+## Note
+
+- A handful of this code was assisted by ChatGPT, to be exact around 30-40%. This README was also created by ChatGPT.
